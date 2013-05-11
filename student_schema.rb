@@ -1,6 +1,7 @@
 require_relative 'db/config'
 require_relative 'app/models/teacher'
 require_relative 'app/models/student'
+require_relative 'app/models/students_and_teachers'
 require 'date'
 
 # Teacher.create!(:name => "Jimmy Dean", :email => "jimmy_dean@email.com", :address => "419 Cucumber Lane, Farmtown IL 90024", :phone => "858-555-2342")
@@ -11,8 +12,7 @@ require 'date'
 # Teacher.create!(:name => "Katharine Perry", :email => "k_perry@email.com", :address => "109 Lettuc Lane, Farmtown IL 90024", :phone => "858-555-7888")
 # Teacher.create!(:name => "Georges Dupont", :email => "georges_dupont@email.com", :address => "668 Cabbage Lane, Farmtown IL 90024", :phone => "858-555-7641")
 
-Student.all.each do |student|
-	student[:full_name] = student[:first_name] + " " + student[:last_name]
-	puts student[:full_name]
-	student.save
+
+10.times do 
+	StudentsAndTeachers.create!(:student_id => (5..58).to_a.sample, :teacher_id => (1..9).to_a.sample)
 end
