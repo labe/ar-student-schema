@@ -1,4 +1,4 @@
-ActiveRecord Student Schema
+CookieVille Schema
 ===========================
 
 To get started:
